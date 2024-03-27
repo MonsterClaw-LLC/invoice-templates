@@ -9,49 +9,42 @@
     <style>
         @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Poppins:wght@100;300;400;500;600;700&display=swap");
         @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
-
         body {
             font-family: "Inter", sans-serif;
             margin: 0;
             padding: 0;
             background-color: aliceblue;
         }
-
         img {
             max-width: 100%;
         }
-
         .invo_top_right .invo_type img {
             width: 140px;
         }
-
         .invoice_pdf_container {
             max-width: 595px;
-            background-image: linear-gradient(-57deg, #86b3da 50%, #ffffff 50%);
-            background-position: center;
-            background-repeat: no-repeat;
+            min-height: 782px;
+            background-image: url(assets/img/amaz-bg.jpg);
+            background-position: top;
             background-size: cover;
+            background-repeat: no-repeat;
             margin: 0 auto;
         }
-
         .container {
             padding: 30px 20px;
             margin: 0 auto;
         }
-
         .invoice-logo img {
             max-width: 200px;
             object-fit: cover;
             height: auto;
         }
-
         .invoice_top {
             display: flex;
             align-items: flex-start;
             justify-content: space-between;
             margin: 40px 0 30px 0;
         }
-
         .bill_to,
         .pdf_from,
         .bill_info {
@@ -59,27 +52,23 @@
             padding: 0 20px;
             font-size: 12px;
             line-height: 17px;
-            color: #222234;
+            color: #ffffff;
         }
-
         .bill_to {
             padding-left: 0;
         }
-
         .bill_info {
             padding-right: 0;
         }
-
         .bill_to_title,
         .pdf_from_title,
         .pdf_info_title {
             font-size: 14px;
             font-weight: 700;
-            color: #6f6f84;
+            color: #f3f3f3;
             line-height: 15.6px;
             padding-bottom: 7px;
         }
-
         .pdf_to_name,
         .pdf_from_name,
         .total_amount {
@@ -88,19 +77,14 @@
             line-height: 17px;
             padding-bottom: 5px;
         }
-
         .payment_section {
             padding-bottom: 30px;
             border-bottom: 1px solid #614dff7a;
         }
-
         .pdf_to_adress,
         .pdf_from_adress {
             font-size: 12px;
         }
-
-        /* Table style start here */
-
         table {
             font-family: arial, sans-serif;
             border-collapse: collapse;
@@ -170,7 +154,7 @@
             padding-bottom: 20px;
             font-size: 16px;
             font-weight: 600;
-            color: #222234;
+            color: #e4e4e4;
         }
         .payment_info {
             display: flex;
