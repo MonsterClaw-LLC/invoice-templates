@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PDF Generator</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Poppins:wght@100;300;400;500;600;700&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+
+        body {
+            font-family: "Inter", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: aliceblue;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        .invo_top_right .invo_type img {
+            width: 140px;
+        }
+
+        .invoice_pdf_container {
+            max-width: 595px;
+            min-height: 782px;
+            background-image: url(assets/img/amaz-bg.jpg);
+            background-blend-mode: overlay;
+            background-color: #ffffff70;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 0 auto;
+        }
+
+        .container {
+            padding: 30px 20px;
+            margin: 0 auto;
+        }
+
+        .invoice-logo img {
+            max-width: 200px;
+            object-fit: cover;
+            height: auto;
+        }
+
+        .invoice_top {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            margin: 40px 0 30px 0;
+        }
+
+        .bill_to,
+        .pdf_from,
+        .bill_info {
+            width: 33%;
+            padding: 0 20px;
+            font-size: 12px;
+            line-height: 17px;
+            color: #222234;
+        }
+
+        .bill_to {
+            padding-left: 0;
+        }
+
+        .bill_info {
+            padding-right: 0;
+        }
+
+        .bill_to_title,
+        .pdf_from_title,
+        .pdf_info_title {
+            font-size: 14px;
+            font-weight: 700;
+            color: #6f6f84;
+            line-height: 15.6px;
+            padding-bottom: 7px;
+        }
+
+        .pdf_to_name,
+        .pdf_from_name,
+        .total_amount {
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 17px;
+            padding-bottom: 5px;
+        }
+
+        .payment_section {
+            padding-bottom: 30px;
+            border-bottom: 1px solid #614dff7a;
+        }
+
+        .pdf_to_adress,
+        .pdf_from_adress {
+            font-size: 12px;
+        }
+
+        /* Table style start here */
+
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+            background: #ffffff;
+            margin-top: 39px;
+            border-radius: 3px;
+        }
+        th {
+            font-size: 12px;
+            font-weight: 700;
+        }
+        td {
+            font-size: 12px;
+            line-height: 14.52px;
+            color: #222234;
+        }
+        td,
+        th {
+            text-align: left;
+            padding: 12px;
+        }
+        tr:nth-last-child(1) {
+            border-bottom: 1px solid #d0d0d0;
+        }
+        .invoice_smmery {
+            display: flex;
+            justify-content: flex-end;
+            padding-top: 30px;
+        }
+        .invoice_smmery table {
+            width: 45%;
+        }
+        .invoice_smmery tr:nth-last-child(2) {
+            border-bottom: 1px solid #bcb0c4;
+        }
+        .invoice_smmery th,
+        .invoice_smmery td {
+            padding: 12px;
+            color: #555555;
+        }
+        .payment_section {
+            display: flex;
+            justify-content: end;
+        }
+        .payment_details {
+            width: 65%;
+            padding-top: 50px;
+        }
+        .payment_details .note {
+            font-size: 12px;
+            font-weight: 500;
+            color: #6f6f84;
+            padding-bottom: 5px;
+        }
+        .details_title {
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 12px;
+        }
+        .payment_section .details {
+            font-size: 10px;
+            font-weight: 400;
+            line-height: 14px;
+        }
+        .note_txt {
+            padding-bottom: 20px;
+            font-size: 16px;
+            font-weight: 600;
+            color: #222234;
+        }
+        .payment_info {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 30px 10px 10px;
+            background: #f5f5fa;
+            margin-right: -30px;
+        }
+        .sender_details {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            padding: 20px 0 25px;
+        }
+        .sender_details .sender_web_adress,
+        .sender_details .mail,
+        .sender_details .phone {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 17px;
+            color: #6f6f84;
+        }
+        .sender_details .sender_web_adress span,
+        .sender_details .mail span,
+        .sender_details .phone span {
+            padding-right: 5px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="invoice_pdf_container">
+        <div class="container">
+            <div class="invoice-logo">
+                <img src="assets/img/logo.svg" alt="Sender Logo" />
+            </div>
+            <div class="invoice_top">
+                <div class="bill_to">
+                    <div class="title_data">
+                        <div class="bill_to_title">To:</div>
+                        <div class="pdf_to_name">Monsterclaw LLC</div>
+                        <div class="pdf_to_adress">
+                            Monsterclaw 79 Exning Road HARINGDON BA11 2LE
+                        </div>
+                    </div>
+                </div>
+                <div class="pdf_from">
+                    <div class="title_data">
+                        <div class="pdf_from_title">From:</div>
+                        <div class="pdf_from_name">Monsterclaw LLC</div>
+                        <div class="pdf_from_adress">
+                            Amy Rogers 84 Oxford Road WORLINGHAM NR34 8XA
+                        </div>
+                    </div>
+                </div>
+                <div class="bill_info">
+                    <div class="pdf_info_title">Info:</div>
+                    <div class="total_amount">Amount: $1260.00</div>
+                    <div class="due_date">Invo No <span>-</span><span>057</span></div>
+                    <div class="due_date">Due by <span>29/11/2022</span></div>
+                </div>
+            </div>
+            <table>
+                <tr>
+                    <th style="text-align: left; color: #a5a7a9">Item</th>
+                    <th style="text-align: right; color: #a5a7a9">Description</th>
+                    <th style="text-align: right; color: #a5a7a9">Quantity</th>
+                    <th style="text-align: right; color: #a5a7a9">Rate</th>
+                    <th style="text-align: right; color: #a5a7a9">Subtotal</th>
+                </tr>
+                <tr>
+                    <td style="text-align: left">Product Name</td>
+                    <td style="text-align: right; font-weight: 600">Short details</td>
+                    <td style="text-align: right; font-weight: 600">2</td>
+                    <td style="text-align: right; font-weight: 600">200</td>
+                    <td style="text-align: right; font-weight: 600">400</td>
+                </tr>
+                <tr>
+                    <td style="text-align: left">Product Name</td>
+                    <td style="text-align: right; font-weight: 600">Short details</td>
+                    <td style="text-align: right; font-weight: 600">2</td>
+                    <td style="text-align: right; font-weight: 600">200</td>
+                    <td style="text-align: right; font-weight: 600">400</td>
+                </tr>
+                <tr>
+                    <td style="text-align: left">Product Name</td>
+                    <td style="text-align: right; font-weight: 600">Short details</td>
+                    <td style="text-align: right; font-weight: 600">2</td>
+                    <td style="text-align: right; font-weight: 600">200</td>
+                    <td style="text-align: right; font-weight: 600">400</td>
+                </tr>
+            </table>
+
+            <div class="invoice_smmery">
+                <table>
+                    <tr>
+                        <!-- <th colspan="2">Invoice Summery</th> -->
+                    </tr>
+                    <tr>
+                        <td style="text-align: left">Subtotal</td>
+                        <td style="text-align: right">1200</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left">Tax</td>
+                        <td style="text-align: right">80</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left">Total <span>(USD)</span></td>
+                        <td style="text-align: right">1280</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="payment_section">
+                <div class="payment_details">
+                    <div class="note">Note</div>
+                    <div class="note_txt">Thanks for the business.</div>
+                    <div class="payment_info">
+                        <div class="details_title">Payment Details</div>
+                        <div class="details">
+                            <div class="paypal">PAYPAL:<span>example@email.com</span></div>
+                            <div class="upi">UPI:<span>userid@okbank</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sender_details">
+                <div class="logo">
+                    <img src="assets/img/logo.svg" alt="Sender Logo" />
+                    <div class="sender_web_adress">
+                        <span class="material-symbols-outlined">language</span>
+                        <div class="adress">www.websitename.com</div>
+                    </div>
+                </div>
+                <div class="mail">
+                    <span class="material-symbols-outlined">mail</span>
+                    <div class="mail_adress">xyx@email.com</div>
+                </div>
+                <div class="phone">
+                    <span class="material-symbols-outlined">phone</span>
+                    <div class="mail_adress">646-888-6885</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
