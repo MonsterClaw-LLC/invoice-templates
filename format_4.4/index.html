@@ -21,51 +21,57 @@
             max-width: 100%;
         }
 
+        .invoice_pdf_container {
+            max-width: 595px;
+            background: linear-gradient(114deg, rgba(56,62,86,1) 9%, rgba(127,219,218,1) 9%, rgba(127,219,218,1) 22%, rgba(75,142,141,1) 22%, rgba(75,142,141,1) 36%, rgba(255,255,255,1) 36%);
+            margin: 0 auto;
+        }
+
         .invoice-logo img {
             width: 140px;
             object-fit: cover;
             height: auto;
         }
 
-        .invoice_pdf_container {
-            max-width: 595px;
-            margin: 0 auto;
-            background: #fff;
-        }
-
-        .topbar {
+        .top-bar,
+        .down-bar {
             display: flex;
             justify-content: space-between;
-            background-color: #A1C398;
-            padding: 20px;
+            padding: 30px 0 0 0;
         }
 
-        .details {
+        .container {
+            padding: 30px;
+        }
+
+        .down-bar {
+            padding: 30px 0;
+        }
+
+        .title-holder {
+            background-color: #3C3633;
+            padding: 0 40px 0 20px;
+            margin-right: 50px;
+        }
+
+        .title-holder h1 {
+            color: #fff;
+        }
+
+        .bottom-ext {
             display: flex;
             justify-content: space-between;
-            padding: 30px 20px;
-            border-bottom: 1px solid #A1C398;
+            padding: 30px 0;
         }
 
-        .conditions {
-            width: 65%;
-            padding: 20px;
-            background: #C6EBC5;
-        }
-
-        .invoice_smmery {
-            width: 35%;
-            padding: 20px;
-            background: #A1C398;
-        }
-
-        .table-holder {
-            padding: 20px;
+        .bottom-details {
+            width: 50%;
         }
 
         table {
             font-family: arial, sans-serif;
             width: 100%;
+            margin-top: 39px;
         }
 
         th {
@@ -75,7 +81,9 @@
 
         td,
         .conditions span,
-        .tnc .details-cont {
+        .bottom-part p,
+        .pdf_from_adress,
+        .pdf_from_adress {
             font-size: 12px;
             line-height: 14.52px;
             color: #222234;
@@ -84,36 +92,29 @@
         td,
         th {
             text-align: left;
-            padding: 12px 0;
+            padding: 12px;
         }
-
         tr:nth-last-child(1) {
             border-bottom: 1px solid #d0d0d0;
         }
-
+        .pdf_from {
+            padding: 12px 0;
+        }
+        .invoice_smmery tr:nth-last-child(2) {
+            border-bottom: 1px solid #bcb0c4;
+        }
         .invoice_smmery th,
         .invoice_smmery td {
-            padding: 12px 0;
+            padding: 12px;
             color: #555555;
         }
-
-        .note-tax {
-            display: flex;
+        .table-holder {
+            background: #fff;
+            padding: 10px;
+            border-radius: 4px;
         }
-
-        .tnc {
-            text-align: center;
-            padding: 20px 0 30px 0;
-        }
-
-        .tnc img {
-            width: 100px;
-            padding: 8px 0;
-        }
-
-        .details-cont {
-            width: 70%;
-            margin: 0 auto;
+        .bottom-part img {
+            width: 120px;
         }
     </style>
 </head>
@@ -121,26 +122,18 @@
 <body>
     <div class="invoice_pdf_container">
         <div class="container">
-            <div class="topbar">
+            <div class="top-bar">
                 <div class="invoice-logo">
                     <img src="assets/img/logo.svg" alt="Sender Logo" />
                 </div>
                 <div class="bill_info">
-                    <div class="pdf_info_title">Info:</div>
-                    <div class="total_amount">Amount: $1260.00</div>
                     <div class="due_date">Invo No <span>-</span><span>057</span></div>
                     <div class="due_date">Due by <span>29/11/2022</span></div>
                 </div>
             </div>
-            <div class="details">
-                <div class="pdf_from">
-                    <div class="title_data">
-                        <div class="pdf_from_title">From:</div>
-                        <div class="pdf_from_name">Monsterclaw LLC</div>
-                        <div class="pdf_from_adress">
-                            Amy Rogers 84 Oxford Road WORLINGHAM NR34 8XA
-                        </div>
-                    </div>
+            <div class="down-bar">
+                <div class="title-holder">
+                    <h1>INVOICE</h1>
                 </div>
                 <div class="bill_to">
                     <div class="title_data">
@@ -182,13 +175,46 @@
                         <td style="text-align: right; font-weight: 600">200</td>
                         <td style="text-align: right; font-weight: 600">400</td>
                     </tr>
+                    <tr>
+                        <td style="text-align: left">Product Name</td>
+                        <td style="text-align: right; font-weight: 600">Short details</td>
+                        <td style="text-align: right; font-weight: 600">2</td>
+                        <td style="text-align: right; font-weight: 600">200</td>
+                        <td style="text-align: right; font-weight: 600">400</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left">Product Name</td>
+                        <td style="text-align: right; font-weight: 600">Short details</td>
+                        <td style="text-align: right; font-weight: 600">2</td>
+                        <td style="text-align: right; font-weight: 600">200</td>
+                        <td style="text-align: right; font-weight: 600">400</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left">Product Name</td>
+                        <td style="text-align: right; font-weight: 600">Short details</td>
+                        <td style="text-align: right; font-weight: 600">2</td>
+                        <td style="text-align: right; font-weight: 600">200</td>
+                        <td style="text-align: right; font-weight: 600">400</td>
+                    </tr>
                 </table>
             </div>
-            <div class="note-tax">
-                <div class="conditions">
-                    <div>Note:</div>
-                    <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt laborum consequatur ullam
-                        commodi voluptatibus omnis maiores error iure hic ipsa.</span>
+            <div class="bottom-ext">
+                <div class="bottom-details">
+                    <div>
+                        <div>Thank you for your business</div>
+                    </div>
+                    <div class="pdf_from">
+                        <div class="title_data">
+                            <div class="pdf_from_name">Monsterclaw LLC</div>
+                            <div class="pdf_from_adress">
+                                Amy Rogers 84 Oxford Road WORLINGHAM NR34 8XA
+                            </div>
+                        </div>
+                    </div>
+                    <div class="conditions">
+                        <div>Terms & conditions</div>
+                        <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</span>
+                    </div>
                 </div>
                 <div class="invoice_smmery">
                     <table>
@@ -202,15 +228,10 @@
                         </tr>
                         <tr>
                             <td style="text-align: left">Total <span>(USD)</span></td>
-                            <td style="text-align: right">1280</td>
+                            <td style="text-align: right"><span style="font-size: 32px; font-weight:700;">12390</span>
+                            </td>
                         </tr>
                     </table>
-                </div>
-            </div>
-            <div class="tnc">
-                <div>powered by</div>
-                <img src="assets/img/logo.svg" alt="">
-                <div class="details-cont">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos illum
                 </div>
             </div>
         </div>
