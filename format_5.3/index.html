@@ -21,18 +21,13 @@
         }
         .invoice_pdf_container {
             max-width: 595px;
-            background-image: linear-gradient(180deg, #265073 50%, #2D9596 50%);
+            background: linear-gradient(114deg, #67C6E3 9%, #378CE766 9%, #378CE766 22%, #5356FF66 22%, #5356FF66 36%, #fff 36%);
             margin: 0 auto;
         }
         .invoice-logo img {
             width: 140px;
             object-fit: cover;
             height: auto;
-        }
-        .bill_to,
-        .down-bar,
-        .bill_info {
-            color: #ebdddd;
         }
         .top-bar,
         .down-bar {
@@ -44,7 +39,24 @@
             padding: 30px;
         }
         .down-bar {
-            padding: 20px 0;
+            padding: 30px 0;
+        }
+        .title-holder {
+            background-color: #3C3633;
+            padding: 0 40px 0 20px;
+            margin-right: 50px;
+        }
+        .title-holder h1 {
+            color: #fff;
+        }
+        .bottom-ext {
+            display: flex;
+            justify-content: space-between;
+            padding: 30px;
+            background: linear-gradient(70deg, #12407666 0%, #12407666 50%, rgba(255,255,255,1) 50%);
+        }
+        .bottom-details {
+            width: 50%;
         }
         table {
             font-family: arial, sans-serif;
@@ -57,7 +69,9 @@
         }
         td,
         .conditions span,
-        .bottom-part p {
+        .bottom-part p,
+        .pdf_from_adress,
+        .pdf_from_adress {
             font-size: 12px;
             line-height: 14.52px;
             color: #222234;
@@ -70,12 +84,8 @@
         tr:nth-last-child(1) {
             border-bottom: 1px solid #d0d0d0;
         }
-        .invoice_smmery {
-            display: flex;
-            justify-content: flex-end;
-        }
-        .invoice_smmery table {
-            width: 45%;
+        .pdf_from {
+            padding: 12px 0;
         }
         .invoice_smmery tr:nth-last-child(2) {
             border-bottom: 1px solid #bcb0c4;
@@ -90,18 +100,7 @@
             padding: 10px;
             border-radius: 4px;
         }
-        .conditions {
-            padding: 30px 12px;
-        }
-        .bottom-part {
-            display: flex;
-            justify-content: space-between;
-            align-items: end;
-            padding: 30px 0;
-        }
-        .bottom-part img {
-            width: 120px;
-        }
+
     </style>
 </head>
 
@@ -113,21 +112,13 @@
                     <img src="assets/img/logo.svg" alt="Sender Logo" />
                 </div>
                 <div class="bill_info">
-                    <div class="pdf_info_title">Info:</div>
-                    <div class="total_amount">Amount: $1260.00</div>
                     <div class="due_date">Invo No <span>-</span><span>057</span></div>
                     <div class="due_date">Due by <span>29/11/2022</span></div>
                 </div>
             </div>
             <div class="down-bar">
-                <div class="pdf_from">
-                    <div class="title_data">
-                        <div class="pdf_from_title">From:</div>
-                        <div class="pdf_from_name">Monsterclaw LLC</div>
-                        <div class="pdf_from_adress">
-                            Amy Rogers 84 Oxford Road WORLINGHAM NR34 8XA
-                        </div>
-                    </div>
+                <div class="title-holder">
+                    <h1>INVOICE</h1>
                 </div>
                 <div class="bill_to">
                     <div class="title_data">
@@ -169,43 +160,65 @@
                         <td style="text-align: right; font-weight: 600">200</td>
                         <td style="text-align: right; font-weight: 600">400</td>
                     </tr>
+                    <tr>
+                        <td style="text-align: left">Product Name</td>
+                        <td style="text-align: right; font-weight: 600">Short details</td>
+                        <td style="text-align: right; font-weight: 600">2</td>
+                        <td style="text-align: right; font-weight: 600">200</td>
+                        <td style="text-align: right; font-weight: 600">400</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left">Product Name</td>
+                        <td style="text-align: right; font-weight: 600">Short details</td>
+                        <td style="text-align: right; font-weight: 600">2</td>
+                        <td style="text-align: right; font-weight: 600">200</td>
+                        <td style="text-align: right; font-weight: 600">400</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left">Product Name</td>
+                        <td style="text-align: right; font-weight: 600">Short details</td>
+                        <td style="text-align: right; font-weight: 600">2</td>
+                        <td style="text-align: right; font-weight: 600">200</td>
+                        <td style="text-align: right; font-weight: 600">400</td>
+                    </tr>
                 </table>
-                <div class="invoice_smmery">
-                    <table>
-                        <tr>
-                            <td style="text-align: left">Subtotal</td>
-                            <td style="text-align: right">1200</td>
-                        </tr>
-                        <tr>
-                            <td style="text-align: left">Tax</td>
-                            <td style="text-align: right">80</td>
-                        </tr>
-                        <tr>
-                            <td style="text-align: left">Total <span>(USD)</span></td>
-                            <td style="text-align: right">1280</td>
-                        </tr>
-                    </table>
+            </div>
+
+        </div>
+        <div class="bottom-ext">
+            <div class="bottom-details">
+                <div>
+                    <div>Thank you for your business</div>
+                </div>
+                <div class="pdf_from">
+                    <div class="title_data">
+                        <div class="pdf_from_name">Monsterclaw LLC</div>
+                        <div class="pdf_from_adress">
+                            Amy Rogers 84 Oxford Road WORLINGHAM NR34 8XA
+                        </div>
+                    </div>
                 </div>
                 <div class="conditions">
                     <div>Terms & conditions</div>
-                    <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt laborum consequatur ullam
-                        commodi voluptatibus omnis maiores error iure hic ipsa.</span>
+                    <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</span>
                 </div>
             </div>
-            <div class="bottom-part">
-                <div>
-                    <div>Business name</div>
-                    <p>Address 1</p>
-                    <p>Address 2</p>
-                </div>
-                <div>
-                    <p>ratul@monsterclaw.com</p>
-                    <p>+928-830-128</p>
-                    <p>https://monsterclaw.com</p>
-                </div>
-                <div>
-                    <img src="assets/img/logo.svg" alt="Test logo">
-                </div>
+            <div class="invoice_smmery">
+                <table>
+                    <tr>
+                        <td style="text-align: left">Subtotal</td>
+                        <td style="text-align: right">1200</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left">Tax</td>
+                        <td style="text-align: right">80</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left">Total <span>(USD)</span></td>
+                        <td style="text-align: right"><span style="font-size: 32px; font-weight:700;">12390</span>
+                        </td>
+                    </tr>
+                </table>
             </div>
         </div>
     </div>

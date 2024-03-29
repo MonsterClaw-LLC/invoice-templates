@@ -19,37 +19,44 @@
         img {
             max-width: 100%;
         }
-        .invoice_pdf_container {
-            max-width: 595px;
-            background-image: linear-gradient(180deg, #265073 50%, #2D9596 50%);
-            margin: 0 auto;
-        }
         .invoice-logo img {
             width: 140px;
             object-fit: cover;
             height: auto;
         }
-        .bill_to,
-        .down-bar,
-        .bill_info {
-            color: #ebdddd;
+        .invoice_pdf_container {
+            max-width: 595px;
+            margin: 0 auto;
+            background: #fff;
         }
-        .top-bar,
-        .down-bar {
+        .topbar {
             display: flex;
             justify-content: space-between;
-            padding: 30px 0 0 0;
+            background-color: #496989;
+            padding: 20px;
         }
-        .container {
-            padding: 30px;
+        .details {
+            display: flex;
+            justify-content: space-between;
+            padding: 30px 20px;
+            border-bottom: 1px solid #496989;
         }
-        .down-bar {
-            padding: 20px 0;
+        .conditions {
+            width: 65%;
+            padding: 20px;
+            background: #EEEEEE;
+        }
+        .invoice_smmery {
+            width: 35%;
+            padding: 20px;
+            background: #496989;
+        }
+        .table-holder {
+            padding: 20px;
         }
         table {
             font-family: arial, sans-serif;
             width: 100%;
-            margin-top: 39px;
         }
         th {
             font-size: 12px;
@@ -57,7 +64,7 @@
         }
         td,
         .conditions span,
-        .bottom-part p {
+        .tnc .details-cont {
             font-size: 12px;
             line-height: 14.52px;
             color: #222234;
@@ -65,42 +72,30 @@
         td,
         th {
             text-align: left;
-            padding: 12px;
+            padding: 12px 0;
         }
         tr:nth-last-child(1) {
             border-bottom: 1px solid #d0d0d0;
         }
-        .invoice_smmery {
-            display: flex;
-            justify-content: flex-end;
-        }
-        .invoice_smmery table {
-            width: 45%;
-        }
-        .invoice_smmery tr:nth-last-child(2) {
-            border-bottom: 1px solid #bcb0c4;
-        }
         .invoice_smmery th,
         .invoice_smmery td {
-            padding: 12px;
+            padding: 12px 0;
             color: #555555;
         }
-        .table-holder {
-            background: #fff;
-            padding: 10px;
-            border-radius: 4px;
-        }
-        .conditions {
-            padding: 30px 12px;
-        }
-        .bottom-part {
+        .note-tax {
             display: flex;
-            justify-content: space-between;
-            align-items: end;
-            padding: 30px 0;
         }
-        .bottom-part img {
-            width: 120px;
+        .tnc {
+            text-align: center;
+            padding: 20px 0 30px 0;
+        }
+        .tnc img {
+            width: 100px;
+            padding: 8px 0;
+        }
+        .details-cont {
+            width: 70%;
+            margin: 0 auto;
         }
     </style>
 </head>
@@ -108,7 +103,7 @@
 <body>
     <div class="invoice_pdf_container">
         <div class="container">
-            <div class="top-bar">
+            <div class="topbar">
                 <div class="invoice-logo">
                     <img src="assets/img/logo.svg" alt="Sender Logo" />
                 </div>
@@ -119,7 +114,7 @@
                     <div class="due_date">Due by <span>29/11/2022</span></div>
                 </div>
             </div>
-            <div class="down-bar">
+            <div class="details">
                 <div class="pdf_from">
                     <div class="title_data">
                         <div class="pdf_from_title">From:</div>
@@ -170,6 +165,13 @@
                         <td style="text-align: right; font-weight: 600">400</td>
                     </tr>
                 </table>
+            </div>
+            <div class="note-tax">
+                <div class="conditions">
+                    <div>Note:</div>
+                    <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt laborum consequatur ullam
+                        commodi voluptatibus omnis maiores error iure hic ipsa.</span>
+                </div>
                 <div class="invoice_smmery">
                     <table>
                         <tr>
@@ -186,25 +188,11 @@
                         </tr>
                     </table>
                 </div>
-                <div class="conditions">
-                    <div>Terms & conditions</div>
-                    <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt laborum consequatur ullam
-                        commodi voluptatibus omnis maiores error iure hic ipsa.</span>
-                </div>
             </div>
-            <div class="bottom-part">
-                <div>
-                    <div>Business name</div>
-                    <p>Address 1</p>
-                    <p>Address 2</p>
-                </div>
-                <div>
-                    <p>ratul@monsterclaw.com</p>
-                    <p>+928-830-128</p>
-                    <p>https://monsterclaw.com</p>
-                </div>
-                <div>
-                    <img src="assets/img/logo.svg" alt="Test logo">
+            <div class="tnc">
+                <div>powered by</div>
+                <img src="assets/img/logo.svg" alt="">
+                <div class="details-cont">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos illum
                 </div>
             </div>
         </div>
