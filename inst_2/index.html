@@ -25,89 +25,23 @@
             max-width: 595px;
             margin: 0 auto;
             padding: 60px 30px;
-            background: linear-gradient(90deg, #8B93FF 38%, #EEEEEE 38%, #EEEEEE 60%, #fff 60%);
-        }
-        .inv-top{
-            display: flex;
-            justify-content: space-between;
-        }
-        .shaped-bg {
-            clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
-            background: black;
-            color: white;
-            padding: 36px 36px 36px 20px;
-            width: 237px;
-        }
-        table {
-            font-family: arial, sans-serif;
-            width: 100%;
-            margin-top: 39px;
-            background-color: #fff;
-        }
-        tr:first-child{
-            background-color: yellow;
-        }
-        th {
-            font-size: 14px;
-            font-weight: 700;
-        }
-        td,
-        .conditions span,
-        .bottom-part p,
-        .pdf_from_adress,
-        .pdf_from_adress{
-            font-size: 13px;
-            line-height: 14.52px;
-            color: #222234;
-        }
-        td,
-        th {
-            text-align: left;
-            padding: 14px;
-        }
-        .bottom-details {
-            width: 50%;
-        }
-        .inv-top {
-            margin: 0 0 30px 0;
-        }
-        .table-holder {
-            padding-bottom: 40px;
-        }
-        .bottom-ext {
-            display: flex;
-            justify-content: space-between;
-        }
-        .title_data {
-            padding: 20px 0;
-        }
-        .invoice_smmery table{
-            background: none;
-        }
-        .invoice_smmery tr:nth-last-child(2) {
-            border-bottom: 1px solid #bcb0c4;
-        }
-        .invoice_smmery th,
-        .invoice_smmery td {
-            padding: 12px;
-            color: #555555;
         }
     </style>
 </head>
 <body>
     <div class="invoice_pdf_container">
         <div class="container">
-            <div class="inv-top">
-                <div class="shaped-bg">
-                    <div style="font-size: 18px;">Invoice to:</div>
-                    <p style="font-size: 20px; font-weight:600">Clark keint</p>
-                    <span>24 Dhaka, Dhanmondi</span>
-                </div>
-                <div>
-                    <h1>INVOICE</h1>
-                    <div>Invoice: #2930</div>
-                    <div>Date: 20/2/2023</div>
-                </div>
+            <div class="top-part">
+                <img src="" alt="">
+                <div>Monsterclaw LLC</div>
+                <span>Lorem ipsum dolor sit amet consectetur.</span>
+            </div>
+            <div>
+                <h1>INVOICE</h1>
+            </div>
+            <div class="invoice-details">
+                <div>Invoice no: <span>2983</span></div>
+                <div>Bill to: <span>Lorem12, 848 road, dhaka</span></div>
             </div>
             <div class="table-holder">
                 <table>
@@ -162,41 +96,31 @@
                     </tr>
                 </table>
             </div>
-            <div class="bottom-ext">
-                <div class="bottom-details">
-                    <div>
-                        <div>Thank you for your business</div>
-                    </div>
-                    <div class="pdf_from">
-                        <div class="title_data">
-                            <div class="pdf_from_name">Monsterclaw LLC</div>
-                            <div class="pdf_from_adress">
-                                Amy Rogers 84 Oxford Road WORLINGHAM NR34 8XA
-                            </div>
-                        </div>
-                    </div>
-                    <div class="conditions">
-                        <div>Terms & conditions</div>
-                        <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</span>
-                    </div>
-                </div>
-                <div class="invoice_smmery">
-                    <table>
-                        <tr>
-                            <td style="text-align: left">Subtotal</td>
-                            <td style="text-align: right">1200</td>
-                        </tr>
-                        <tr>
-                            <td style="text-align: left">Tax</td>
-                            <td style="text-align: right">80</td>
-                        </tr>
-                        <tr>
-                            <td style="text-align: left">Total <span>(USD)</span></td>
-                            <td style="text-align: right"><span style="font-size: 32px; font-weight:700;">12390</span>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
+
+            <div class="invoice_smmery">
+                <table>
+                    <tr>
+                        <td style="text-align: left">Subtotal</td>
+                        <td style="text-align: right">1200</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left">Tax</td>
+                        <td style="text-align: right">80</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left">Total <span>(USD)</span></td>
+                        <td style="text-align: right"><span style="font-size: 32px; font-weight:700;">12390</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+
+
+            <div class="bank-details">
+                <div>Bank name: <span>Olive bank</span></div>
+                <div>Bank Account: <span>01838847</span></div>
+
             </div>
         </div>
     </div>
