@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>PDF Generator</title>
-        <style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Generator</title>
+    <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Poppins:wght@100;300;400;500;600;700&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
 
@@ -15,11 +16,10 @@
             padding: 0;
             background-color: aliceblue;
         }
-
         img {
             max-width: 100%;
         }
-        .invo_top_right .invo_type img{
+        .invo_top_right .invo_type img {
             width: 140px;
         }
         .invoice_pdf_container {
@@ -29,12 +29,10 @@
             margin: 0 auto;
             border-bottom: 24px solid #614DFF63;
         }
-
         .container {
             padding: 50px 55px;
             margin: 0 auto;
         }
-
         .invoice_top {
             display: flex;
             justify-content: space-between;
@@ -42,78 +40,71 @@
             align-items: center;
             padding: 20px 0 0;
         }
-
         .invo_top_left {
             max-width: 60%;
             width: 100%;
         }
-
-        .detail_left .bill_to{
+        .detail_left .bill_to {
             font-size: 10px;
             font-weight: 700;
         }
-
-        .invo_amount{
+        .invo_amount {
             font-size: 20px;
             line-height: 1.5;
             color: #4F4D4D;
         }
-
-        .invo_amount span{
+        .invo_amount span {
             font-weight: 700;
             color: #38427D;
         }
-
-        .due_date{
+        .due_date {
             font-size: 20px;
             line-height: 1.5;
             color: #4F4D4D;
         }
-
-        .due_date span{
+        .due_date span {
             font-weight: 700;
             color: #4F4D4D;
         }
-
         .invo_top_right {
             max-width: 40%;
             width: 100%;
         }
-
         .invo_type {
             font-size: 16px;
         }
-
-        .detail_right .pdf_from_adress, .detail_right .pdf_from_web_adress, .detail_right .pdf_from_mail, .detail_right .pdf_from_phone {
+        .detail_right .pdf_from_adress,
+        .detail_right .pdf_from_web_adress,
+        .detail_right .pdf_from_mail,
+        .detail_right .pdf_from_phone {
             display: flex;
             align-items: flex-start;
             justify-content: flex-start;
             font-size: 11px;
             font-weight: 400;
         }
-        .pdf_from_adress span, .pdf_from_web_adress span, .pdf_from_mail span, .pdf_from_phone span{
+        .pdf_from_adress span,
+        .pdf_from_web_adress span,
+        .pdf_from_mail span,
+        .pdf_from_phone span {
             font-size: 12px;
             line-height: 2.7;
             letter-spacing: 5px;
         }
-
         .invoice_title {
             display: flex;
             align-items: center;
             justify-content: center;
             padding: 32px 0 28px;
         }
-
         .invoice_title img {
             object-fit: contain;
         }
-
         .invoice_title h2 {
             font-size: 32px;
             font-weight: 900;
             line-height: 0;
         }
-
         .invoice_details {
             display: flex;
             justify-content: space-between;
@@ -124,28 +115,22 @@
             font-weight: 400;
             border-bottom: 1px solid #d0d0d0;
         }
-
-
         .invoice_details .detail_left {
             width: 40%;
             font-size: 11px;
         }
-
-        .invoice_details .detail_right{
+        .invoice_details .detail_right {
             width: 40%;
         }
-
-        .pdf_to_invo_issu_date span, .pdf_to_invo_number span{
+        .pdf_to_invo_issu_date span,
+        .pdf_to_invo_number span {
             font-weight: 700;
             padding-right: 5px;
         }
-        
         .colon {
             padding: 0 10px;
         }
-
         /* Table style start here */
-
         table {
             font-family: arial, sans-serif;
             border-collapse: collapse;
@@ -153,141 +138,142 @@
             background: #FFFFFF;
             margin-top: 10px;
         }
-
         th {
             font-size: 10px;
             border-bottom: 1px solid #d0d0d0;
             font-weight: 700;
         }
-
         td {
             font-size: 10px;
             line-height: 12.1px;
         }
-
         td,
         th {
             text-align: left;
             padding: 9px;
         }
-
-        tr:nth-last-child(1){
+        tr:nth-last-child(1) {
             border-bottom: 1px solid #d0d0d0;
         }
-
         .invoice_smmery {
             display: flex;
             justify-content: flex-end;
             padding-top: 30px;
         }
-
         .invoice_smmery table {
             width: 40%;
         }
-
-        .invoice_smmery tr:nth-last-child(2){
+        .invoice_smmery tr:nth-last-child(2) {
             border-bottom: 1px solid #BCB0C4;
         }
-
-        .invoice_smmery th,.invoice_smmery td{
+        .invoice_smmery th,
+        .invoice_smmery td {
             padding: 9px 0;
             color: #555555;
         }
-
         .invo_comments {
             font-size: 10px;
             padding: 50px 0 0;
             text-align: left;
         }
-
-
     </style>
-    </head>
-    <body>
-        <div class="invoice_pdf_container">
-            <div class="container">
-                <div class="invoice_top">
-                    <div class="invo_top_left">
-                        <div class="invo_amount">Invoice for <span>£1500.00</span></div>
-                        <div class="due_date">Due by <span>29 October 2022</span></div>
-                    </div>
-                    <div class="invo_top_right">
-                        <div class="invo_type">
-                            <img src="./assets/images/company_logo.svg" alt="">
-                        </div>
-                    </div>
-                </div>
+</head>
 
-                <div class="invoice_details">
-                    <div class="detail_left">
-                        <div class="title_data">
-                            <div class="bill_to">Billed to:</div>
-                            <div class="pdf_to_name">Monsterclaw LLC</div>
-                            <div class="pdf_to_adress">Monsterclaw 79 Exning Road HARINGDON BA11 2LE</div>
-                            <div class="pdf_to_invo_number"><span>Invoice number :</span>123456A</div>
-                            <div class="pdf_to_invo_issu_date"><span>Issuing date :</span>01 March 2022</div>
-                        </div>
-                    </div>
-                    <div class="detail_right">
-                        <div class="title_data">
-                            <div class="pdf_from_adress"><span class="material-symbols-outlined address_nav_icon">location_on</span> <div class="address_location">Amy Rogers 84 Oxford Road WORLINGHAM NR34 8XA</div></div>
-                            <div class="pdf_from_web_adress"><span class="material-symbols-outlined address_web_icon">language</span> <div class="web_address">monsterclaw.com</div></div>
-                            <div class="pdf_from_mail"><span class="material-symbols-outlined address_mail_icon">send</span> <div class="mail_adddress">client@monsterclaw.com</div></div>
-                            <div class="pdf_from_phone"><span class="material-symbols-outlined address_phone_icon">call</span> <div class="phone">+44 7123 456789</div></div>
-                        </div>
-                    </div>
+<body>
+    <div class="invoice_pdf_container">
+        <div class="container">
+            <div class="invoice_top">
+                <div class="invo_top_left">
+                    <div class="invo_amount">Invoice for <span>£1500.00</span></div>
+                    <div class="due_date">Due by <span>29 October 2022</span></div>
                 </div>
-
-                <table>
-                    <tr>
-                        <th style="text-align:left; color:#A5A7A9;">Item</th>
-                        <th style="text-align:right; color:#A5A7A9; ">Description</th>
-                        <th style="text-align:right; color:#A5A7A9; ">Quantity</th>
-                        <th style="text-align:right; color:#A5A7A9;">Rate</th>
-                        <th style="text-align:right; color:#A5A7A9;">Subtotal</th>
-                    </tr>
-                    <tr>
-                        <td style="text-align:left;">Product Name</td>
-                        <td style="text-align:right;">Short details</td>
-                        <td style="text-align:right;">200</td>
-                        <td style="text-align:right;">400</td>
-                        <td style="text-align:right;">7600</td>
-                    </tr>
-                    <tr>
-                        <td style="text-align:left;">Product Name</td>
-                        <td style="text-align:right;">Short details</td>
-                        <td style="text-align:right;">200</td>
-                        <td style="text-align:right;">400</td>
-                        <td style="text-align:right;">7600</td>
-                    </tr>
-                    <tr>
-                        <td style="text-align:left;">Product Name</td>
-                        <td style="text-align:right;">Short details</td>
-                        <td style="text-align:right;">200</td>
-                        <td style="text-align:right;">400</td>
-                        <td style="text-align:right;">7600</td>
-                    </tr>
-                </table>
-                <div class="invoice_smmery">
-                    <table>
-                        <tr>
-                            <!-- <th colspan="2">Invoice Summery</th> -->
-                        </tr>
-                        <tr>
-                            <td style="text-align: left;">Subtotal</td>
-                            <td style="text-align: right;">1200</td>
-                        </tr>
-                        <tr>
-                            <td style="text-align: left;">Tax</td>
-                            <td style="text-align: right;">80</td>
-                        </tr>
-                        <tr>
-                            <td style="text-align: left;">Total <span>(USD)</span></td>
-                            <td style="text-align: right;">1280</td>
-                        </tr>
-                    </table>
+                <div class="invo_top_right">
+                    <div class="invo_type">
+                        <img src="./assets/images/company_logo.svg" alt="">
+                    </div>
                 </div>
             </div>
+            <div class="invoice_details">
+                <div class="detail_left">
+                    <div class="title_data">
+                        <div class="bill_to">Billed to:</div>
+                        <div class="pdf_to_name">Monsterclaw LLC</div>
+                        <div class="pdf_to_adress">Monsterclaw 79 Exning Road HARINGDON BA11 2LE</div>
+                        <div class="pdf_to_invo_number"><span>Invoice number :</span>123456A</div>
+                        <div class="pdf_to_invo_issu_date"><span>Issuing date :</span>01 March 2022</div>
+                    </div>
+                </div>
+                <div class="detail_right">
+                    <div class="title_data">
+                        <div class="pdf_from_adress"><span
+                                class="material-symbols-outlined address_nav_icon">location_on</span>
+                            <div class="address_location">Amy Rogers 84 Oxford Road WORLINGHAM NR34 8XA</div>
+                        </div>
+                        <div class="pdf_from_web_adress"><span
+                                class="material-symbols-outlined address_web_icon">language</span>
+                            <div class="web_address">monsterclaw.com</div>
+                        </div>
+                        <div class="pdf_from_mail"><span class="material-symbols-outlined address_mail_icon">send</span>
+                            <div class="mail_adddress">client@monsterclaw.com</div>
+                        </div>
+                        <div class="pdf_from_phone"><span
+                                class="material-symbols-outlined address_phone_icon">call</span>
+                            <div class="phone">+44 7123 456789</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <table>
+                <tr>
+                    <th style="text-align:left; color:#A5A7A9;">Item</th>
+                    <th style="text-align:right; color:#A5A7A9; ">Description</th>
+                    <th style="text-align:right; color:#A5A7A9; ">Quantity</th>
+                    <th style="text-align:right; color:#A5A7A9;">Rate</th>
+                    <th style="text-align:right; color:#A5A7A9;">Subtotal</th>
+                </tr>
+                <tr>
+                    <td style="text-align:left;">Product Name</td>
+                    <td style="text-align:right;">Short details</td>
+                    <td style="text-align:right;">200</td>
+                    <td style="text-align:right;">400</td>
+                    <td style="text-align:right;">7600</td>
+                </tr>
+                <tr>
+                    <td style="text-align:left;">Product Name</td>
+                    <td style="text-align:right;">Short details</td>
+                    <td style="text-align:right;">200</td>
+                    <td style="text-align:right;">400</td>
+                    <td style="text-align:right;">7600</td>
+                </tr>
+                <tr>
+                    <td style="text-align:left;">Product Name</td>
+                    <td style="text-align:right;">Short details</td>
+                    <td style="text-align:right;">200</td>
+                    <td style="text-align:right;">400</td>
+                    <td style="text-align:right;">7600</td>
+                </tr>
+            </table>
+            <div class="invoice_smmery">
+                <table>
+                    <tr>
+                        <!-- <th colspan="2">Invoice Summery</th> -->
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;">Subtotal</td>
+                        <td style="text-align: right;">1200</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;">Tax</td>
+                        <td style="text-align: right;">80</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;">Total <span>(USD)</span></td>
+                        <td style="text-align: right;">1280</td>
+                    </tr>
+                </table>
+            </div>
         </div>
-    </body>
+    </div>
+</body>
+
 </html>
