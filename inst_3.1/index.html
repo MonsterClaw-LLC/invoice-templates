@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Poppins:wght@100;300;400;500;600;700&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+
+        body {
+            font-family: "Inter", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: aliceblue;
+        }
+        img {
+            max-width: 100%;
+        }
+        p,
+        h1 {
+            padding: 0;
+            margin: 0;
+        }
+        .invoice_pdf_container {
+            max-width: 595px;
+            margin: 0 auto;
+            padding: 40px 30px;
+            background-color: #fff;
+        }
+        .invoice-details {
+            display: flex;
+            justify-content: space-between;
+            padding: 30px 0;
+        }
+        .top-part {
+            display: flex;
+            padding-bottom: 20px;
+        }
+        .top-part img {
+            width: 140px;
+            object-fit: cover;
+            height: auto;
+        }
+        .custom-bg-holder {
+            background-color: #41B06E;
+        }
+        .custom-bg{
+            display: flex;
+            justify-content: end;
+            margin: 0 30px 0 0;
+        }
+        .custom-bg h1{
+            background: #fff;
+            padding: 0 10px;
+            font-size: 32px;
+            font-weight: 500;
+        }
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+            background: #ffffff;
+            margin-top: 39px;
+            border-radius: 3px;
+        }
+        .table-holder table{
+            border: 1px solid #d0d0d0;
+        }
+        th {
+            font-size: 12px;
+            font-weight: 700;
+        }
+        td,
+        .conditions span,
+        .bottom-part p,
+        .pdf_from_adress,
+        .pdf_from_adress {
+            font-size: 12px;
+            line-height: 14.52px;
+            color: #222234;
+        }
+        td,
+        th {
+            text-align: left;
+            padding: 12px;
+        }
+        .table-holder tr:first-child{
+            background-color: #41B06E;
+        }
+        .invoice_smmery tr:nth-last-child(1) {
+            border-bottom: 1px solid #d0d0d0;
+            background-color: #41B06E;
+        }
+        .bottom-ext {
+            display: flex;
+            justify-content: space-between;
+            padding: 30px 0;
+        }
+        .bottom-details {
+            width: 50%;
+        }
+        .pdf_bottom_from {
+            padding: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="invoice_pdf_container">
+        <div class="container">
+            <div class="top-part">
+                <img src="assets/img/logo.svg" alt="Logo">
+            </div>
+            <div class="custom-bg-holder">
+                <div class="custom-bg">
+                    <h1>INVOICE</h1>
+                </div>
+            </div>
+            <div class="invoice-details">
+                <div class="pdf_from">
+                    <div class="title_data">
+                        <div class="pdf_from_title">From:</div>
+                        <div>Monsterclaw LLC</div>
+                        <div>
+                            Amy Rogers 84 Oxford Road WORLINGHAM NR34 8XA
+                        </div>
+                    </div>
+                </div>
+                <div class="bill_to">
+                    <div class="title_data">
+                        <div class="bill_to_title">To:</div>
+                        <div>Monsterclaw LLC</div>
+                        <div>
+                            Monsterclaw 79 Exning Road HARINGDON BA11 2LE
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="table-holder">
+                <table>
+                    <tr>
+                        <th style="text-align: left;">Item</th>
+                        <th style="text-align: right;">Description</th>
+                        <th style="text-align: right;">Quantity</th>
+                        <th style="text-align: right;">Rate</th>
+                        <th style="text-align: right;">Subtotal</th>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left">Product Name</td>
+                        <td style="text-align: right; font-weight: 600">Short details</td>
+                        <td style="text-align: right; font-weight: 600">2</td>
+                        <td style="text-align: right; font-weight: 600">200</td>
+                        <td style="text-align: right; font-weight: 600">400</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left">Product Name</td>
+                        <td style="text-align: right; font-weight: 600">Short details</td>
+                        <td style="text-align: right; font-weight: 600">2</td>
+                        <td style="text-align: right; font-weight: 600">200</td>
+                        <td style="text-align: right; font-weight: 600">400</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left">Product Name</td>
+                        <td style="text-align: right; font-weight: 600">Short details</td>
+                        <td style="text-align: right; font-weight: 600">2</td>
+                        <td style="text-align: right; font-weight: 600">200</td>
+                        <td style="text-align: right; font-weight: 600">400</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left">Product Name</td>
+                        <td style="text-align: right; font-weight: 600">Short details</td>
+                        <td style="text-align: right; font-weight: 600">2</td>
+                        <td style="text-align: right; font-weight: 600">200</td>
+                        <td style="text-align: right; font-weight: 600">400</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left">Product Name</td>
+                        <td style="text-align: right; font-weight: 600">Short details</td>
+                        <td style="text-align: right; font-weight: 600">2</td>
+                        <td style="text-align: right; font-weight: 600">200</td>
+                        <td style="text-align: right; font-weight: 600">400</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left">Product Name</td>
+                        <td style="text-align: right; font-weight: 600">Short details</td>
+                        <td style="text-align: right; font-weight: 600">2</td>
+                        <td style="text-align: right; font-weight: 600">200</td>
+                        <td style="text-align: right; font-weight: 600">400</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="bottom-ext">
+                <div class="bottom-details">
+                    <div>
+                        <div>Thank you for your business</div>
+                    </div>
+                    <div class="pdf_bottom_from">
+                        <div class="title_data">
+                            <div class="pdf_from_name">Monsterclaw LLC</div>
+                            <div class="pdf_from_adress">
+                                Amy Rogers 84 Oxford Road WORLINGHAM NR34 8XA
+                            </div>
+                        </div>
+                    </div>
+                    <div class="conditions">
+                        <div>Terms & conditions</div>
+                        <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</span>
+                    </div>
+                </div>
+                <div class="invoice_smmery">
+                    <table>
+                        <tr>
+                            <td style="text-align: left">Subtotal</td>
+                            <td style="text-align: right">1200</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left">Tax</td>
+                            <td style="text-align: right">80</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left">Total <span>(USD)</span></td>
+                            <td style="text-align: right"><span style="font-size: 20px; font-weight:700;">12390</span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
