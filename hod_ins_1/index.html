@@ -24,10 +24,13 @@
         ol {
             margin: 0;
         }
+        ol li {
+            padding: 5px 0;
+        }
         
 
         .section-padding{
-            max-width: 595px;
+            max-width: 768px;
             margin: 0 auto;
             background-image: url(assets/img/bg.svg);
             background-position: right bottom;
@@ -60,8 +63,7 @@
         .top-left-shape {
             height: 20px;
             width: 20px;
-            color: #000;
-            background: black;
+            background: #ffd512;
             display: inline;
             margin-right: 10px;
         }
@@ -158,6 +160,7 @@
         .bottom-part {
             display: flex;
             align-items: center;
+            padding: 15px 0 15px 30px;
         }
 
         .bottom-shape {
@@ -173,6 +176,8 @@
             width: 40%;
             margin: 0 30px 20px auto;
         }
+
+
 
     </style>
 </head>
@@ -279,8 +284,9 @@
             </div>
     
             <div class="wire-details">
-                <div class="wire-title">Wire Transfer Details</div>
-                <div>BRAC Bank PLC</div>
+                <div>Wire Transfer Details</div>
+                <div style="height: 2px; width: 70px; background:#000"></div>
+                <div style="padding: 20px 0;">BRAC Bank PLC</div>
                 <ol>
                     <li>Account Name - Monsterclaw LTD</li>
                     <li>Account Number - 9388002</li>
