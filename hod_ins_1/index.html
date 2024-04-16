@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,28 +15,33 @@
             padding: 0;
             background-color: aliceblue;
         }
+
         img {
             max-width: 100%;
         }
-        p, h1{
+
+        p,
+        h1 {
             padding: 4px 0 0 0;
             margin: 0;
         }
+
         ol {
             margin: 0;
         }
+
         ol li {
             padding: 5px 0;
         }
-        
 
-        .section-padding{
+
+        .section-padding {
             max-width: 768px;
             margin: 0 auto;
             background-image: url(assets/img/bg.svg);
             background-position: right bottom;
             background-repeat: no-repeat;
-            background-size: 55%;
+            background-size: 75%;
             background-color: #fff;
         }
 
@@ -46,7 +52,7 @@
             justify-content: space-between;
         }
 
-        .top-bar img{
+        .top-bar img {
             max-width: 140px;
             object-fit: fill;
         }
@@ -73,13 +79,14 @@
         .top-right-shape {
             height: 80px;
             width: 100px;
-            background: #000;
+            background: #d6dac862;
             position: relative;
         }
-        .small{
+
+        .small {
             height: 40px;
             width: 40px;
-            background-color: cadetblue;
+            background-color: #ffd512;
             position: absolute;
             bottom: -10%;
             left: -10%;
@@ -103,8 +110,9 @@
             justify-content: space-between;
             padding: 30px;
         }
-        
-        .all-details div, .wire-details div {
+
+        .all-details div,
+        .wire-details div {
             font-weight: 600;
         }
 
@@ -119,33 +127,39 @@
             margin-top: 39px;
             border: 1px solid #000;
         }
+
         tr {
             border: 1px solid black;
-          }
+        }
 
         th {
             font-size: 14px;
             font-weight: 700;
         }
+
         td,
         .conditions span,
         .bottom-part p,
         .pdf_from_adress,
-        .pdf_from_adress{
+        .pdf_from_adress {
             font-size: 13px;
             line-height: 14.52px;
             color: #222234;
         }
+
         td,
         th {
             text-align: left;
             padding: 14px;
         }
-        table, tr {
+
+        .main-table table,
+        tr {
             border: 1px solid black;
             border-collapse: collapse;
-          }
-          .wire-details {
+        }
+
+        .wire-details {
             border: 1px solid black;
             padding: 14px;
             margin: 20px 30px;
@@ -166,8 +180,7 @@
         .bottom-shape {
             height: 5px;
             width: 20px;
-            color: #000;
-            background: black;
+            background: #ffd512;
             display: inline;
             margin-right: 8px;
         }
@@ -176,11 +189,9 @@
             width: 40%;
             margin: 0 30px 20px auto;
         }
-
-
-
     </style>
 </head>
+
 <body>
     <div class="section-padding">
         <div class="container">
@@ -222,14 +233,14 @@
                     <p>+8801983638838</p>
                 </div>
             </div>
-    
+
             <div class="inv-info">
                 <p>Invoice Number: 122784898</p>
                 <p>Invoice Created: Feb 29, 2023</p>
             </div>
-    
+
             <div class="main-table">
-    
+
                 <table>
                     <tr>
                         <th>Item</th>
@@ -261,10 +272,10 @@
                     </tr>
 
                 </table>
-    
-    
+
+
             </div>
-    
+
             <div class="invoice_smmery">
                 <table>
                     <tr>
@@ -277,12 +288,12 @@
                     </tr>
                     <tr>
                         <td style="text-align: left">Total <span>(USD)</span></td>
-                        <td style="text-align: right"><span style="font-weight:700;">12390</span>
+                        <td style="text-align: right"><span style="font-size:18px; font-weight:700;">12390</span>
                         </td>
                     </tr>
                 </table>
             </div>
-    
+
             <div class="wire-details">
                 <div>Wire Transfer Details</div>
                 <div style="height: 2px; width: 70px; background:#000"></div>
@@ -294,7 +305,7 @@
                     <li>SWIFT - BRACBDDH</li>
                 </ol>
             </div>
-    
+
             <div class="bottom-part">
                 <span class="bottom-shape"></span>
                 <div>monsterclaw.com</div>
@@ -307,4 +318,5 @@
 
     </div>
 </body>
+
 </html>
