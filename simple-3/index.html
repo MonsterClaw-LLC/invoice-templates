@@ -23,6 +23,9 @@
             margin: 0 auto;
             background-color: #fff;
             padding: 60px 40px 20px 40px;
+            border-width: 20px 0 0px 0;
+            border-style: solid;
+            border-color: #10b981;
         }
 
         .comp-details{
@@ -42,20 +45,18 @@
             padding-bottom: 12px;
         }
         
-        .business-details {
-            padding: 20px 0 30px 0;
-        }
+
 
         .invoice_address {
             display: grid;
             grid-template-columns: auto auto auto;
             gap: 20px;
+            background: #dddddd6b;
+            padding: 20px;
+            margin: 30px 0;
         }
         
-        .dynamic_details {
-            border-top: 1px solid gainsboro;
-            padding: 15px 0;
-        }
+
         
         .dynamic_details_title {
             font-weight: 600;
@@ -100,6 +101,18 @@
         }
         .bottom-part{
             text-align: center;
+            padding: 20px 0;
+        }
+        .bottom-details {
+            width: 50%;
+        }
+        .bottom-details div{
+            font-weight: 600;
+        }
+        .bottom-details span{
+            font-weight: 500;
+            padding: 10px 0 20px 0;
+            display: inline-block;
         }
     </style>
 </head>
@@ -121,10 +134,10 @@
                     <p>21/12/2024</p>
                 </div> -->
             </div>
-            <div class="business-details">
+            <!-- <div class="business-details">
                 <h1>Business Name</h1>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea esse iusto laudantium.</p>
-            </div>
+            </div> -->
 
 
             <div class="invoice_address">
@@ -184,26 +197,45 @@
                 </table>
             </div>
 
-
-            <div class="invoice_smmery">
-                <table>
-                    <tr>
-                        <!-- <th colspan="2">Invoice Summery</th> -->
-                    </tr>
-                    <tr>
-                        <td style="text-align: left">Subtotal</td>
-                        <td style="text-align: right">1200</td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: left">Tax</td>
-                        <td style="text-align: right">80</td>
-                    </tr>
-                    <tr style="border-top: 1px solid gray;">
-                        <td style="text-align: left; font-weight:600;">Total <span>(USD)</span></td>
-                        <td style="text-align: right; font-weight:600; font-size: 20px">1280</td>
-                    </tr>
-                </table>
+            <div style="display: flex; padding:30px 0;">
+                <div class="bottom-details">
+                    <!-- <div>
+                        <div>Thank you for your business</div>
+                    </div> -->
+                    <div class="pdf_from">
+                        <div class="title_data">
+                            <div class="pdf_from_name">Monsterclaw LLC</div>
+                            <span class="pdf_from_adress">
+                                Amy Rogers 84 Oxford Road WORLINGHAM NR34 8XA
+                            </span>
+                        </div>
+                    </div>
+                    <div class="conditions">
+                        <div>Terms & conditions</div>
+                        <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</span>
+                    </div>
+                </div>
+                <div class="invoice_smmery">
+                    <table>
+                        <tr>
+                            <!-- <th colspan="2">Invoice Summery</th> -->
+                        </tr>
+                        <tr>
+                            <td style="text-align: left">Subtotal</td>
+                            <td style="text-align: right">1200</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left">Tax</td>
+                            <td style="text-align: right">80</td>
+                        </tr>
+                        <tr style="border-top: 1px solid gray;">
+                            <td style="text-align: left; font-weight:600;">Total <span>(USD)</span></td>
+                            <td style="text-align: right; font-weight:600; font-size: 20px">1280</td>
+                        </tr>
+                    </table>
+                </div>
             </div>
+
             <div class="bottom-part">
                 <p>Thank you for doing business with us.</p>
             </div>
