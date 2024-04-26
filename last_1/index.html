@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Poppins:wght@100;300;400;500;600;700&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+
+        body {
+            font-family: "Inter", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: aliceblue;
+        }
+        img {
+            max-width: 100%;
+        }
+        p,
+        h1 {
+            padding: 4px 0 0 0;
+            margin: 0;
+        }
+        table {
+            font-family: arial, sans-serif;
+            width: 100%;
+            margin-top: 39px;
+        }
+        th {
+            font-weight: 700;
+        }
+        td,
+        .conditions span,
+        .bottom-part p,
+        .pdf_from_adress,
+        .pdf_from_adress {
+            color: #222234;
+        }
+        td,
+        th {
+            text-align: left;
+            padding: 14px 10px 14px 0;
+        }
+        td:last-child,
+        th:last-child {
+            padding: 14px 0px 14px 10px;
+            text-align: right;
+        }
+        .section-padding {
+            max-width: 720px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 60px;
+        }
+        .top-bar {
+            padding-bottom: 30px;
+        }
+        .top-bar h1 {
+            font-size: 42px;
+            padding-bottom: 10px;
+        }
+        .top-bar {
+            text-align: right;
+        }
+        .billing-details .bill {
+            font-size: 20px;
+            font-weight: 600;
+            padding-bottom: 14px;
+        }
+        .billing-details span {
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .other-details div {
+            padding-bottom: 8px;
+        }
+        .other-details {
+            padding: 20px 0 30px 0;
+        }
+        .bottom-part div {
+            padding-bottom: 20px;
+        }
+        .bottom-part {
+            padding: 30px 0 0 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="section-padding">
+        <div class="container">
+            <div class="top-bar">
+                <h1>INVOICE</h1>
+                <p>#1024</p>
+            </div>
+            <div class="billing-details">
+                <div class="bill">BILLED TO: <span>Monsterclaw LLC</span></div>
+                <div class="bill">PAY TO: <span>Monsterclaw LLC</span></div>
+                <div class="other-details">
+                    <div>Bank- Shonali Bank LTD</div>
+                    <div>BSB- Shonali Bank LTD</div>
+                    <div>Account name- Shonali Bank LTD</div>
+                    <div>Account No.- Shonali Bank LTD</div>
+                </div>
+            </div>
+            <div class="main-table">
+                <table>
+                    <tr>
+                        <th>Item</th>
+                        <th>Description</th>
+                        <th>Quantity</th>
+                        <th>Rate</th>
+                        <th>Subtotal</th>
+                    </tr>
+                    <tr>
+                        <td>Product Name</td>
+                        <td>Short details</td>
+                        <td>2</td>
+                        <td>200</td>
+                        <td>400</td>
+                    </tr>
+                    <tr>
+                        <td>Product Name</td>
+                        <td>Short details</td>
+                        <td>2</td>
+                        <td>200</td>
+                        <td>400</td>
+                    </tr>
+                    <tr>
+                        <td>Product Name</td>
+                        <td>Short details</td>
+                        <td>2</td>
+                        <td>200</td>
+                        <td>400</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="invoice_smmery">
+                <table>
+                    <tr>
+                        <td style="text-align: left">Subtotal</td>
+                        <td style="text-align: right">1200</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left">Tax</td>
+                        <td style="text-align: right">80</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left; font-size:26px; font-weight:700;">Total <span>(USD)</span></td>
+                        <td style="text-align: right"><span style="font-size:26px; font-weight:700;">12390</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="bottom-part">
+                <div>Payment is required within 14 business date of invoice. Please send the amount to
+                    ratul@monsterclaw.com</div>
+                <div>Thank you for doing business with us</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
