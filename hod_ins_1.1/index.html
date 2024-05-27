@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Poppins:wght@100;300;400;500;600;700&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+
+        body {
+            font-family: "Inter", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: aliceblue;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        p,
+        h1 {
+            padding: 4px 0 0 0;
+            margin: 0;
+        }
+
+        ol {
+            margin: 0;
+        }
+
+        ol li {
+            padding: 5px 0;
+        }
+
+        .section-padding {
+            max-width: 768px;
+            margin: 0 auto;
+            background-image: url(assets/img/bg.svg);
+            background-position: right bottom;
+            background-repeat: no-repeat;
+            background-size: 75%;
+            background-color: #fff;
+        }
+
+        .top-bar {
+            display: flex;
+            padding-left: 60px;
+            justify-content: space-between;
+        }
+
+        .top-bar img {
+            max-width: 140px;
+            object-fit: contain;
+        }
+
+        .top-left {
+            display: flex;
+            align-items: center;
+            width: 400px;
+        }
+
+        .top-left-shape {
+            height: 20px;
+            width: 20px;
+            background: #2C4E80;
+            display: inline;
+            margin-right: 10px;
+        }
+
+        .top-right-shape {
+            height: 80px;
+            width: 100px;
+            background: #9AC8CD;
+            position: relative;
+        }
+
+        .small {
+            height: 40px;
+            width: 40px;
+            background-color: #2C4E80;
+            position: absolute;
+            bottom: -10%;
+            left: -10%;
+        }
+
+        .inv-info {
+            padding: 0 60px;
+        }
+
+        .inv-title {
+            text-align: center;
+            padding: 50px 60px 0px 60px;
+        }
+
+        .inv-details {
+            display: flex;
+            justify-content: space-between;
+            padding: 30px 60px;
+        }
+
+        .all-details div,
+        .wire-details div {
+            font-weight: 600;
+        }
+
+        .main-table {
+            padding: 30px 60px;
+        }
+
+        table {
+            font-family: arial, sans-serif;
+            width: 100%;
+            margin-top: 39px;
+            border: 1px solid #000;
+        }
+
+        tr {
+            border: 1px solid black;
+        }
+
+        th {
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        td,
+        .conditions span,
+        .bottom-part p,
+        .pdf_from_adress,
+        .pdf_from_adress {
+            font-size: 13px;
+            line-height: 14.52px;
+            color: #222234;
+        }
+
+        td,
+        th {
+            text-align: left;
+            padding: 14px;
+        }
+
+        .main-table table,
+        tr {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        .wire-details {
+            border: 1px solid black;
+            padding: 14px;
+            margin: 30px 60px;
+        }
+
+        .bottom-part {
+            display: flex;
+            align-items: center;
+            padding: 15px 0 15px 60px;
+        }
+
+        .bottom-shape {
+            height: 5px;
+            width: 20px;
+            background: #2C4E80;
+            display: inline;
+            margin-right: 8px;
+        }
+
+        .invoice_smmery {
+            width: 40%;
+            margin: 0 60px 20px auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <div>
+            <div>
+                <div>
+                    <div>
+                        <div>
+                            <div>
+                                <div class="section-padding">
+                                    <div class="container">
+                                        <div class="top-bar">
+                                            <div class="top-left">
+                                                <span class="top-left-shape"></span>
+                                                <img src="assets/img/logo.png" alt="Logo">
+                                            </div>
+                                            <div class="top-right-shape">
+                                                <div class="small"></div>
+                                            </div>
+                                        </div>
+                                        <div class="inv-title">
+                                            <h1>IT Enabled Services (ITES)</h1>
+                                        </div>
+                                        <div class="inv-details">
+                                            <div class="all-details">
+                                                <div>From</div>
+                                                <div>John Doe</div>
+                                                <p>Street no. 2873</p>
+                                                <p>Z City</p>
+                                                <p>Post -24773</p>
+                                                <p>USA</p>
+                                                <p>john@example.com</p>
+                                                <p>+83638838</p>
+                                            </div>
+                                            <div class="all-details">
+                                                <div>To</div>
+                                                <div>Nick Fury</div>
+                                                <p>Street no. 73</p>
+                                                <p>Y City</p>
+                                                <p>Post -273</p>
+                                                <p>USA</p>
+                                                <p>nick@example.com</p>
+                                                <p>+83638838</p>
+                                            </div>
+                                        </div>
+                                        <div class="inv-info">
+                                            <p>Invoice Number: 122784898</p>
+                                            <p>Invoice Created: Feb 29, 2023</p>
+                                        </div>
+                                        <div class="main-table">
+                                            <table>
+                                                <tr>
+                                                    <th>Item</th>
+                                                    <th>Description</th>
+                                                    <th>Quantity</th>
+                                                    <th>Rate</th>
+                                                    <th>Subtotal</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>Product Name</td>
+                                                    <td>Short details</td>
+                                                    <td>2</td>
+                                                    <td>200</td>
+                                                    <td>400</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Product Name</td>
+                                                    <td>Short details</td>
+                                                    <td>2</td>
+                                                    <td>200</td>
+                                                    <td>400</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Product Name</td>
+                                                    <td>Short details</td>
+                                                    <td>2</td>
+                                                    <td>200</td>
+                                                    <td>400</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <div class="invoice_smmery">
+                                            <table>
+                                                <tr>
+                                                    <td style="text-align: left">Subtotal</td>
+                                                    <td style="text-align: right">1200</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="text-align: left">Tax</td>
+                                                    <td style="text-align: right">80</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="text-align: left">Total <span>(USD)</span></td>
+                                                    <td style="text-align: right"><span
+                                                            style="font-size:18px; font-weight:700;">12390</span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <div class="wire-details">
+                                            <div>Wire Transfer Details</div>
+                                            <div style="height: 2px; width: 70px; background:#000"></div>
+                                            <div style="padding: 20px 0;">Bank of USA</div>
+                                            <ol>
+                                                <li>Account Name - John Doe</li>
+                                                <li>Account Number - 9388002</li>
+                                                <li>Routing Number - 09028893</li>
+                                                <li>SWIFT - Example</li>
+                                            </ol>
+                                        </div>
+                                        <div class="bottom-part">
+                                            <span class="bottom-shape"></span>
+                                            <div>easyinvoicebuilder.com</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
