@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Poppins:wght@100;300;400;500;600;700&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+
+        body {
+            font-family: "Inter", sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        p,
+        h1 {
+            padding: 4px 0 2px 0;
+            margin: 0;
+        }
+        p {
+            font-size: 14px;
+            color: #5E6470;
+            font-weight: normal;
+        }
+        img {
+            max-width: 100%;
+        }
+        table {
+            font-family: arial, sans-serif;
+            width: 100%;
+            margin-top: 39px;
+        }
+        th {
+            font-weight: 700;
+            color: #E87117;
+        }
+        td {
+            color: #222234;
+        }
+        .invoice-body span {
+            font-size: 14px;
+            color: #5E6470;
+            font-weight: 500;
+        }
+        td,
+        th {
+            text-align: left;
+            font-size: 14px;
+            padding: 10px 10px 10px 0;
+        }
+        td:last-child,
+        th:last-child {
+            padding: 10px 0px 10px 10px;
+            text-align: right;
+        }
+        .section-padding {
+            max-width: 596px;
+            margin: 0 auto;
+            background-color: #F9FAFC;
+        }
+        .bolded-title {
+            font-size: 14px;
+            color: #1A1C21;
+            font-weight: 600;
+        }
+        .total-pricing {
+            padding: 30px 0 0 0;
+            width: 50%;
+            margin: 0 0 0 auto;
+        }
+        .inv-bottom {
+            padding: 20px 20px 30px 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="section-padding">
+        <div class="container">
+            <div class="invoice-top" style="display: grid; grid-template-columns:auto auto; gap: 40px; padding:20px;">
+                <div style="display: flex; align-items:flex-start">
+                    <img src="assets/img/panda.svg" alt="Brand logo">
+                    <div style="margin-left: 20px;">
+                        <h1 style="font-size:24px; color: #E87117;">Panda, Inc</h1>
+                        <p>www.website.com</p>
+                        <p>hello@example.com</p>
+                        <p>+28289473</p>
+                    </div>
+                </div>
+                <div style="text-align: right;">
+                    <p>Business address</p>
+                    <p>City, State, IN -00 000</p>
+                    <p>Tax ID: 0000000000</p>
+                </div>
+            </div>
+            <div class="invoice-body"
+                style="padding: 20px 16px; border:1px solid #D7DAE0; border-radius:12px; background:#fff; margin:15px;">
+                <div style="display: grid; grid-template-columns: auto auto auto; gap: 30px">
+                    <div>
+                        <span>Billed to</span>
+                        <div class="bolded-title">Company Name</div>
+                        <p>company address</p>
+                        <p>City, State, IN -00 000</p>
+                        <p>Tax ID: 0000000000</p>
+                    </div>
+                    <div>
+                        <div>
+                            <span>Invoice Number</span>
+                            <div class="bolded-title">#892A4884</div>
+                        </div>
+                        <div style="padding: 20px 0 0 0;">
+                            <span>Referance</span>
+                            <div class="bolded-title">INV-90</div>
+                        </div>
+                    </div>
+                    <div style="text-align: end;">
+                        <span>Invoice of (USD)</span>
+                        <div style="color: #E87117; font-size:24px; font-weight: 700;">$88,445.89</div>
+                    </div>
+                </div>
+                <div style="display: grid; grid-template-columns: auto auto auto; padding:20px 0 30px 0;">
+                    <div>
+                        <span>Invoice of (USD)</span>
+                        <div class="bolded-title">$88,445.89</div>
+                    </div>
+                    <div>
+                        <span>Invoice of (USD)</span>
+                        <div class="bolded-title">$88,445.89</div>
+                    </div>
+                    <div style="text-align: end;">
+                        <span>Invoice of (USD)</span>
+                        <div class="bolded-title">$88,445.89</div>
+                    </div>
+                </div>
+                <div class="main-table">
+                    <table>
+                        <tr>
+                            <th>ITEM DETAIL</th>
+                            <th>QTY</th>
+                            <th>RATE</th>
+                            <th>AMOUNT</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>Product Name</div>
+                                <span style="font-size:12px;">Item description</span>
+                            </td>
+                            <td>Short details</td>
+                            <td>2</td>
+                            <td>200</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>Product Name</div>
+                                <span style="font-size:12px;">Item description</span>
+                            </td>
+                            <td>Short details</td>
+                            <td>2</td>
+                            <td>200</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>Product Name</div>
+                                <span style="font-size:12px;">Item description</span>
+                            </td>
+                            <td>Short details</td>
+                            <td>2</td>
+                            <td>200</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="total-pricing">
+                    <table>
+                        <tr>
+                            <td>Subtotal</td>
+                            <td>$29302</td>
+                        </tr>
+                        <tr>
+                            <td>Tax (10%)</td>
+                            <td>$29</td>
+                        </tr>
+                        <tr style="font-weight: 600;">
+                            <td>Total</td>
+                            <td>$2930210</td>
+                        </tr>
+                    </table>
+                </div>
+                <div style="padding: 40px 0 0 0;">
+                    <p>Thanks for your Business</p>
+                </div>
+            </div>
+            <div class="inv-bottom">
+                <span style="color: #000; font-size: 12px; font-weight:500">Terms and conditions</span>
+                <p>Please pay within 15 days of receiving this invoice.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
