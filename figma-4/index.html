@@ -17,13 +17,13 @@
             background-color: #f0f3f3;
         }
         p,
-        h1 {
+        h1, h2 {
             padding: 4px 0 2px 0;
             margin: 0;
         }
         p {
             font-size: 14px;
-            color: #5E6470;
+            color: #0A2540;
             font-weight: normal;
         }
         img {
@@ -39,7 +39,7 @@
             color: #1A1C21;
         }
         td {
-            color: #5E6470;
+            color: #0A2540;
         }
         td,
         th {
@@ -56,7 +56,7 @@
             max-width: 596px;
             margin: 0 auto;
             background-color: #fff;
-            padding: 16px;
+            padding: 50px 45px;
         }
 
     </style>
@@ -65,6 +65,115 @@
 <body>
     <div class="section-padding">
         <div class="container">
+
+
+
+
+
+            <div class="inv-top" style="display: grid; grid-template-columns: 50% 45%; gap: 5%;">
+                <img src="assets/img/logo.svg" alt="">
+                <div class="top-details" style="text-align: end;">
+                    <h1 style="font-size: 20px; color: #0A2540">INVOICE</h1>
+                    <h2 style="font-size: 18px;">BLOCKS DESIGN STUDIO</h2>
+                    <p>REG: 17927726637000</p>
+                    <p>hi@example.com | +648 3883 3993</p>
+
+
+                    <div style="padding: 30px 0 30px 0;">
+                        <div style="color: #0A2540; font-size: 16px; font-weight: 600; padding: 0 0 10px 0">ACME CO.</div>
+                        <div style="display: flex; justify-content:space-between;">
+                            <p>INVOICE NUMBER</p>
+                            <p>INV- 0002</p>
+                        </div>
+                        <div style="display: flex; justify-content:space-between;">
+                            <p>INVOICE DATE</p>
+                            <p>02 Jan, 2024</p>
+                        </div>
+                        <div style="display: flex; justify-content:space-between;">
+                            <p>DUE DATE</p>
+                            <p>02 Jan, 2024</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-table">
+                    <table>
+                        <tr>
+                            <th>ITEM DETAIL</th>
+                            <th>QTY</th>
+                            <th>RATE</th>
+                            <th>AMOUNT</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div style="color: #1A1C21; font-weight:600">Product Name</div>
+                                <span style="font-size:12px;">Item description</span>
+                            </td>
+                            <td>Short details</td>
+                            <td>2</td>
+                            <td>200</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div style="color: #1A1C21; font-weight:600">Product Name</div>
+                                <span style="font-size:12px;">Item description</span>
+                            </td>
+                            <td>Short details</td>
+                            <td>2</td>
+                            <td>200</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div style="color: #1A1C21; font-weight:600">Product Name</div>
+                                <span style="font-size:12px;">Item description</span>
+                            </td>
+                            <td>Short details</td>
+                            <td>2</td>
+                            <td>200</td>
+                        </tr>
+                    </table>
+                </div>
+
+
+
+                <div class="total-table" style="width: 50%; margin: 0 0 0 auto; padding: 30px 0;">
+                    <table>
+                        <tr>
+                            <td style="color:#1A1C21; font-weight:600">Subtotal</td>
+                            <td>$29302</td>
+                        </tr>
+                        <tr>
+                            <td style="color:#1A1C21; font-weight:600">Tax (10%)</td>
+                            <td>$29</td>
+                        </tr>
+                        <tr style="color: #1A1C21; font-weight:600">
+                            <td>Total</td>
+                            <td>$2930210</td>
+                        </tr>
+                    </table>
+                </div>
+
+
+                <div class="inv-bottom" style="display: grid; grid-template-columns: 60% 40%; gap: 40px;">
+                    <div>
+                        <div style="color: #635BFF; font-size: 14px; font-weight: 600">PAYMENT INSTRUCTIONS</div>
+                        <p>Blocks design studio</p>
+                        <p>Bank name: ABC Bank Limited</p>
+                        <p>SWIFT/IBAN: NZ0201230012</p>
+                        <p>Account number: 12-1234-123456-12</p>
+                        <div style="color: #0A2540; font-size: 14px; font-weight: 600; padding: 0 0 30px 0">Please use as INV-0002 as a reference number</div>
+
+                        <p>For any questions please contact us at hi@blocksdesign.co</p>
+                    </div>
+                    <div>
+                        <p>Pay Online</p>
+                        <a href="#" style="display: block; color: #0A2540; font-size: 14px; font-weight: 600; padding: 10px 0;">https://buy.stripe.com/</a>
+                        <img src="assets/img/pay.svg" alt="">
+                    </div>
+                </div>
+
+
 
 
 
