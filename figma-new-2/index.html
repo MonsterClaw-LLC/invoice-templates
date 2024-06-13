@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Poppins:wght@100;300;400;500;600;700&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+
+        body {
+            font-family: "Inter", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f3f3;
+        }
+
+        p,
+        h1 {
+            padding: 4px 0 2px 0;
+            margin: 0;
+        }
+
+        p {
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            color: #2F2E2A;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        table {
+            font-family: arial, sans-serif;
+            width: 100%;
+            margin-top: 39px;
+        }
+
+        th {
+            font-weight: 700;
+            color: #1A1C21;
+            border-bottom: 1px solid #007DB6 !important;
+        }
+
+        td {
+            color: #0A2540;
+
+        }
+
+        .total-table td {
+            border: none;
+
+        }
+
+        .main-table {
+            border-bottom: 1px solid #007DB6;
+            margin-top: 30px;
+        }
+
+        td,
+        th {
+            text-align: left;
+            font-size: 14px;
+            padding: 10px 10px 10px 0;
+        }
+
+        td:last-child,
+        th:last-child {
+            padding: 10px 0px 10px 10px;
+            text-align: right;
+        }
+
+        .section-padding {
+            max-width: 596px;
+            margin: 0 auto;
+            background-color: #ffffffd8;
+
+            background-image: url("assets/img/png.png");
+            width: 100%;
+            background-position: top center;
+            background-blend-mode: overlay;
+
+
+            padding: 50px 45px;
+        }
+
+
+        .inv-logo img {
+            max-width: 160px;
+        }
+
+        .from-details {
+            display: grid;
+            grid-template-columns: 45% 45%;
+            gap: 10%;
+            padding: 30px 0;
+        }
+
+        .common-flex {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .common-flex-num {
+            min-width: 90px;
+            color: #2F2E2A;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+        }
+
+        .total-table, .half-width {
+            width: 50%;
+            margin: 0 0 0 auto;
+            padding-top: 50px;
+        }
+
+        .common-weight {
+            font-weight: 600;
+        }
+
+        .section-padding h1 {
+            font-size: 50px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+        .total-table tr:last-child td{
+            color: #007DB6;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="section-padding">
+        <div class="container">
+            <div class="inv-logo">
+                <img src="assets/img/Logo.svg" alt="Brand logo">
+            </div>
+
+            <div class="from-details">
+                <div>
+                    <div class="common-weight">From</div>
+                    <p>Name or Company</p>
+                    <p>123 Godly St.</p>
+                    <p>Internet, GW000</p>
+                    <p>United States</p>
+
+                </div>
+                <div>
+                    <h1>INVOICE</h1>
+                    <div class="common-flex">
+                        <div class="common-flex-num">№ 123</div>
+                        <div>
+                            <p>Date: 4/03/2021</p>
+                            <p>Ref: INV109</p>
+                            <p>Bank: Detalis</p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div>
+                <div class="common-weight">To</div>
+                <p>Name or Company</p>
+                <p>123 Godly St.</p>
+                <p>Internet, GW000</p>
+                <p>United States</p>
+
+            </div>
+
+
+            <div class="main-table">
+                <table>
+                    <tr>
+                        <th>ITEM DETAIL</th>
+                        <th>QTY</th>
+                        <th>RATE</th>
+                        <th>AMOUNT</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div style="color: #1A1C21; font-weight:600">Product Name</div>
+                            <span style="font-size:12px;">Item description</span>
+                        </td>
+                        <td>Short details</td>
+                        <td>2</td>
+                        <td>200</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div style="color: #1A1C21; font-weight:600">Product Name</div>
+                            <span style="font-size:12px;">Item description</span>
+                        </td>
+                        <td>Short details</td>
+                        <td>2</td>
+                        <td>200</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div style="color: #1A1C21; font-weight:600">Product Name</div>
+                            <span style="font-size:12px;">Item description</span>
+                        </td>
+                        <td>Short details</td>
+                        <td>2</td>
+                        <td>200</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="total-table">
+                <table>
+                    <tr>
+                        <td>Subtotal</td>
+                        <td>$29302</td>
+                    </tr>
+                    <tr>
+                        <td>Tax (10%)</td>
+                        <td>$29</td>
+                    </tr>
+                    <tr>
+                        <td>Total</td>
+                        <td>$2930210</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="half-width">
+                <div class="common-weight">Additional Information:</div>
+                <p>The conclusion of the diagnosis is attached.</p>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- <div class="inv-top">
+                <div class="inv-number">№ 123</div>
+                <h1 style="font-size: 20px; color: #0A2540">INVOICE</h1>
+            </div>
+            <div class="inv-top common-grid">
+                <div></div>
+                <div class="top-details">
+                    <div style="display: flex; justify-content:space-between; padding-bottom:32px;">
+                        <div>
+                            <div class="common-weight">Issued</div>
+                            <p>02 Jan, 2024</p>
+                        </div>
+                        <div>
+                            <div class="common-weight">Due</div>
+                            <p>02 Jan, 2024</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; justify-content:space-between;">
+                        <div>
+                            <div class="common-weight">From</div>
+                            <p>Name or Company</p>
+                            <p>123 Godly St.</p>
+                            <p>Internet, GW000</p>
+                            <p>United States</p>
+
+                        </div>
+                        <div>
+                            <div class="common-weight">To</div>
+                            <p>Name or Company</p>
+                            <p>123 Godly St.</p>
+                            <p>Internet, GW000</p>
+                            <p>United States</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-table">
+                <table>
+                    <tr>
+                        <th>ITEM DETAIL</th>
+                        <th>QTY</th>
+                        <th>RATE</th>
+                        <th>AMOUNT</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div style="color: #1A1C21; font-weight:600">Product Name</div>
+                            <span style="font-size:12px;">Item description</span>
+                        </td>
+                        <td>Short details</td>
+                        <td>2</td>
+                        <td>200</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div style="color: #1A1C21; font-weight:600">Product Name</div>
+                            <span style="font-size:12px;">Item description</span>
+                        </td>
+                        <td>Short details</td>
+                        <td>2</td>
+                        <td>200</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div style="color: #1A1C21; font-weight:600">Product Name</div>
+                            <span style="font-size:12px;">Item description</span>
+                        </td>
+                        <td>Short details</td>
+                        <td>2</td>
+                        <td>200</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="total-table" style="width: 50%; margin: 0 0 0 auto; padding: 30px 0;">
+                <table>
+                    <tr>
+                        <td style="color:#1A1C21; font-weight:600">Subtotal</td>
+                        <td>$29302</td>
+                    </tr>
+                    <tr>
+                        <td style="color:#1A1C21; font-weight:600">Tax (10%)</td>
+                        <td>$29</td>
+                    </tr>
+                    <tr style="color: #1A1C21; font-weight:600">
+                        <td>Total</td>
+                        <td>$2930210</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="inv-bottom common-grid">
+                <div></div>
+                <div class="bottom-details">
+                    <div class="common-flex">
+                        <p class="common-weight">IBAN</p>
+                        <p>ABCD EFGH 0000 0000 0000</p>
+                    </div> <br>
+                    <p>This invoice is to be paid by wire transfer only, unless agreed otherwise and must be paid before the date due specified above. <br> <br>Thank you <br>Your name</p>
+                </div>
+            </div> -->
+
+
+        </div>
+    </div>
+</body>
+
+</html>
