@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Poppins:wght@100;300;400;500;600;700&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+
+        body {
+            font-family: "Inter", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F6F5F2;
+        }
+        p,
+        h1 {
+            padding: 4px 0 2px 0;
+            margin: 0;
+        }
+        p {
+            color: #0A0909;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+        }
+        img {
+            max-width: 100%;
+        }
+        table {
+            font-family: arial, sans-serif;
+            width: 100%;
+        }
+        th {
+            font-weight: 700;
+            color: #1A1C21;
+        }
+        td {
+            color: #0A2540;
+        }
+        .main-table {
+            margin-top: 30px;
+        }
+        .main-table tr:nth-child(odd){
+            background-color: #139CDA08;
+        }
+        .main-table tr:nth-child(even){
+            background-color: #F9F9F9;
+        }
+
+        td,
+        th {
+            text-align: left;
+            font-size: 14px;
+            padding: 10px;
+        }
+        .section-padding {
+            max-width: 596px;
+            margin: 0 auto;
+            background: #fff;
+        }
+        .container{
+            padding: 20px 45px;
+        }
+        .inv-logo{
+            border-width: 1px 0 1px 0;
+            border-style: solid;
+            border-color: #007DB6;
+            padding: 10px 0;
+            margin: 30px 0;
+        }
+        .inv-details img {
+            max-width: 120px;
+        }
+        .inv-top{
+            display: flex;
+            justify-content: space-between;
+            background-color: #A0DEFF;
+            padding: 20px 45px;
+        }
+        .inv-top h1 {
+            color: #0A0909;
+            text-align: center;
+            font-family: "Reem Kufi";
+            font-size: 50px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+        .common-weight {
+            color: #0A0909;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        .top-details {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 45px;
+            background-color: #CAF4FF;
+        }
+        .orange-title{
+            color: #007DB6;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 600;
+            padding-bottom: 2px;
+        }
+        .bank-info{
+            display: grid;
+            grid-template-columns: 35% 50%;
+            gap: 15%;
+            padding: 40px 0;
+        }
+        .total-table tr:last-child td {
+            color: #fff;
+            font-size: 20px;
+            font-weight: 700;
+            background: #007DB6;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="section-padding">
+        <div class="inv-top">
+            <div>
+                <div class="orange-title">Invoice:</div>
+                <div class="common-weight">Invoice №: 346 774 378</div>
+                <div class="common-weight">DATE: 08/03/2021</div>
+            </div>
+            <h1>INVOICE</h1>
+        </div>
+        <div class="top-details">
+            <div class="common-flex">
+                <div class="orange-title">Payment Info: </div>
+                <p><span class="common-weight">Account№: </span>1234 456 444 555</p>
+                <p><span class="common-weight">A.C Name: </span>ACN Bank</p>
+                <p><span class="common-weight">Bank Detalis: </span>Details</p>
+            </div>
+            <div>
+                <img src="assets/img/logo.svg" alt="">
+            </div>
+        </div>
+        <div class="container">
+            <div class="main-table">
+                <table>
+                    <tr>
+                        <th>ITEM DETAIL</th>
+                        <th>QTY</th>
+                        <th>RATE</th>
+                        <th>AMOUNT</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div style="color: #1A1C21; font-weight:600">Product Name</div>
+                            <span style="font-size:12px;">Item description</span>
+                        </td>
+                        <td>Short details</td>
+                        <td>2</td>
+                        <td>200</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div style="color: #1A1C21; font-weight:600">Product Name</div>
+                            <span style="font-size:12px;">Item description</span>
+                        </td>
+                        <td>Short details</td>
+                        <td>2</td>
+                        <td>200</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div style="color: #1A1C21; font-weight:600">Product Name</div>
+                            <span style="font-size:12px;">Item description</span>
+                        </td>
+                        <td>Short details</td>
+                        <td>2</td>
+                        <td>200</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div style="color: #1A1C21; font-weight:600">Product Name</div>
+                            <span style="font-size:12px;">Item description</span>
+                        </td>
+                        <td>Short details</td>
+                        <td>2</td>
+                        <td>200</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div style="color: #1A1C21; font-weight:600">Product Name</div>
+                            <span style="font-size:12px;">Item description</span>
+                        </td>
+                        <td>Short details</td>
+                        <td>2</td>
+                        <td>200</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="bank-info">
+                <div style="border-top: 1px solid #007DB6; text-align:center; margin-top: 120px">
+                    Author
+                </div>
+                <div class="total-table">
+                    <table>
+                        <tr>
+                            <td>Subtotal</td>
+                            <td style="text-align: right;">$29302</td>
+                        </tr>
+                        <tr>
+                            <td>Tax (10%)</td>
+                            <td style="text-align: right;">$29</td>
+                        </tr>
+                        <tr>
+                            <td>Total</td>
+                            <td style="text-align: right;">$2930210</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
