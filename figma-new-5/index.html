@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Poppins:wght@100;300;400;500;600;700&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+
+        body {
+            font-family: "Inter", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f3f3;
+        }
+        p,
+        h1 {
+            padding: 4px 0 2px 0;
+            margin: 0;
+        }
+        p {
+            color: #0A0909;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+        }
+        img {
+            max-width: 100%;
+        }
+        table {
+            font-family: arial, sans-serif;
+            width: 100%;
+        }
+        th {
+            font-weight: 700;
+            color: #1A1C21;
+            border-bottom: 1px solid #fff !important;
+        }
+        td {
+            color: #0A2540;
+        }
+        .total-table td {
+            color: #fff;
+
+        }
+        .main-table {
+            border-bottom: 1px solid #fff;
+            margin-top: 30px;
+        }
+        td,
+        th {
+            text-align: left;
+            font-size: 14px;
+            padding: 10px 10px 10px 0;
+        }
+        td:last-child,
+        th:last-child {
+            padding: 10px 0px 10px 10px;
+            text-align: right;
+        }
+        .section-padding {
+            max-width: 596px;
+            margin: 0 auto;
+            background: #FFEED6;
+        }
+        .container{
+            padding: 50px 45px;
+
+        }
+        .inv-logo {
+            display: flex;
+            justify-content: space-between;
+            padding: 30px 40px 30px 40px;
+            background: linear-gradient(70deg, rgba(124,170,65,1) 0%, rgba(124,170,65,1) 50%, rgba(255,238,214,1) 50%)
+        }
+        .inv-logo img {
+            max-width: 160px;
+        }
+        .inv-logo h1 {
+            color: #FFF;
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+        .common-weight {
+            color: #0A0909;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        .top-details {
+            display: flex;
+            justify-content: space-between;
+        }
+        .contact-info {
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            padding: 40px 45px;
+        }
+        .common-flex {
+            display: flex;
+        }
+        .extra-gap {
+            padding: 0 20px;
+        }
+        .bank-info {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 45px;
+            background: linear-gradient(70deg, rgba(255,238,214,1) 0%, rgba(255,238,214,1) 50%, rgba(124,170,65,1) 50%);
+        }
+        .total-table tr:last-child td {
+            color: #fff;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="section-padding">
+        <div class="inv-logo">
+            <h1>INVOICE</h1>
+            <img src="assets/img/logo.svg" alt="Brand logo">
+        </div>
+        <div class="container">
+            <div class="top-details">
+                <div class="common-flex">
+                    <div class="common-weight">Invoice to:</div>
+                    <div class="extra-gap">
+                        <div class="common-weight">Emely River</div>
+                        <p>District Solnechny st. Rainbow, house 7, Location</p>
+                    </div>
+
+                </div>
+                <div>
+                    <div class="common-weight">Invoice №: 346 774 378</div>
+                    <div class="common-weight">DATE: 08/03/2021</div>
+                </div>
+            </div>
+            <div class="main-table">
+                <table>
+                    <tr>
+                        <th>ITEM DETAIL</th>
+                        <th>QTY</th>
+                        <th>RATE</th>
+                        <th>AMOUNT</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div style="color: #1A1C21; font-weight:600">Product Name</div>
+                            <span style="font-size:12px;">Item description</span>
+                        </td>
+                        <td>Short details</td>
+                        <td>2</td>
+                        <td>200</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div style="color: #1A1C21; font-weight:600">Product Name</div>
+                            <span style="font-size:12px;">Item description</span>
+                        </td>
+                        <td>Short details</td>
+                        <td>2</td>
+                        <td>200</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div style="color: #1A1C21; font-weight:600">Product Name</div>
+                            <span style="font-size:12px;">Item description</span>
+                        </td>
+                        <td>Short details</td>
+                        <td>2</td>
+                        <td>200</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div style="color: #1A1C21; font-weight:600">Product Name</div>
+                            <span style="font-size:12px;">Item description</span>
+                        </td>
+                        <td>Short details</td>
+                        <td>2</td>
+                        <td>200</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div style="color: #1A1C21; font-weight:600">Product Name</div>
+                            <span style="font-size:12px;">Item description</span>
+                        </td>
+                        <td>Short details</td>
+                        <td>2</td>
+                        <td>200</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="bank-info">
+            <div>
+                <div style="font-size: 18px; font-weight:600;">Payment Info: </div>
+                <p><span class="common-weight">Account№: </span>1234 456 444 555</p>
+                <p><span class="common-weight">A.C Name: </span>ACN Bank</p>
+                <p><span class="common-weight">Bank Detalis: </span>Details</p>
+            </div>
+            <div class="total-table">
+                <table>
+                    <tr>
+                        <td>Subtotal</td>
+                        <td>$29302</td>
+                    </tr>
+                    <tr>
+                        <td>Tax (10%)</td>
+                        <td>$29</td>
+                    </tr>
+                    <tr>
+                        <td>Total</td>
+                        <td>$2930210</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="contact-info">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 36 36" fill="none">
+                    <g clip-path="url(#clip0_30_5)">
+                        <path
+                            d="M34.6999 26.4L24.7999 16.5L18.2999 23L12.2999 17.1L18.6999 10.7L8.89989 0.7C8.49989 0.2 7.79989 0 7.19989 0C6.59989 0 5.99989 0.3 5.49989 0.7C-2.00011 8.9 -1.80011 21.4 6.09989 29.3C10.0999 33.3 15.3999 35.4 20.5999 35.4C25.5999 35.4 30.5999 33.6 34.5999 29.9C35.0999 29.5 35.2999 28.9 35.2999 28.2C35.3999 27.5 35.0999 26.9 34.6999 26.4ZM8.39989 26.9C2.09989 20.6 1.69989 10.6 7.29989 3.8L14.0999 10.6L9.99989 14.6C9.39989 15.2 8.99989 16.1 8.99989 17C8.99989 17.9 9.29989 18.7 9.99989 19.4L15.9999 25.4C16.5999 26 17.4999 26.4 18.3999 26.4C19.2999 26.4 20.0999 26.1 20.7999 25.4L24.8999 21.3L31.6999 28.1C24.6999 33.7 14.7999 33.2 8.39989 26.9Z"
+                            fill="#393939" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_30_5">
+                            <rect width="35.3" height="35.3" fill="white" />
+                        </clipPath>
+                    </defs>
+                </svg>
+                <p>38099345678</p>
+                <p>38099345678</p>
+            </div>
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="26" viewBox="0 0 37 29" fill="none">
+                    <g clip-path="url(#clip0_30_7)">
+                        <path
+                            d="M0 0V28.5H36.1V0H0ZM30.1 3.4L18 17.1L6 3.4H30.1ZM3.4 25.2V5.5L18 22.2L32.7 5.5V25.2H3.4Z"
+                            fill="#393939" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_30_7">
+                            <rect width="36.1" height="28.5" fill="white" />
+                        </clipPath>
+                    </defs>
+                </svg>
+                <p>38099345678</p>
+                <p>38099345678</p>
+            </div>
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="29" viewBox="0 0 28 37" fill="none">
+                    <g clip-path="url(#clip0_30_9)">
+                        <path
+                            d="M14 0C6.3 0 0 6.3 0 14C0 21.3 11.5 33.8 12.8 35.2L14 36.5L15.2 35.2C16.6 33.9 28 21.3 28 14C28 6.3 21.8 0 14 0ZM14 31.6C10.2 27.3 3.4 18.5 3.4 14C3.4 8.1 8.1 3.4 14 3.4C19.9 3.4 24.7 8.2 24.7 14.1C24.7 18.5 17.8 27.3 14 31.6Z"
+                            fill="#393939" />
+                        <path
+                            d="M13.9999 6.8999C10.3999 6.8999 7.3999 9.7999 7.3999 13.4999C7.3999 17.0999 10.2999 20.0999 13.9999 20.0999C17.5999 20.0999 20.5999 17.1999 20.5999 13.4999C20.5999 9.7999 17.5999 6.8999 13.9999 6.8999ZM13.9999 16.5999C12.1999 16.5999 10.7999 15.1999 10.7999 13.3999C10.7999 11.5999 12.1999 10.1999 13.9999 10.1999C15.7999 10.1999 17.1999 11.5999 17.1999 13.3999C17.1999 15.1999 15.7999 16.5999 13.9999 16.5999Z"
+                            fill="#393939" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_30_9">
+                            <rect width="28" height="36.6" fill="white" />
+                        </clipPath>
+                    </defs>
+                </svg>
+                <p>38099345678</p>
+                <p>38099345678</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
